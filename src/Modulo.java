@@ -6,21 +6,20 @@ public class Modulo {
 	private String codigomod = "";
 	
 	
-	public Modulo(String modulo, int horas, String codigomod) {
-		super();
-		this.nombre = modulo;
+	public Modulo(String nombre, int horas, String codigomod) {
+		this.nombre = nombre;
 		this.horas = horas;
 		this.codigomod = codigomod;
 	}
-
+	
 
 	public String getModulo() {
 		return nombre;
 	}
 
 
-	public void setModulo(String modulo) {
-		this.nombre = modulo;
+	public void setModulo(String nombre) {
+		this.nombre = nombre;
 	}
 
 
@@ -46,8 +45,11 @@ public class Modulo {
 
 	@Override
 	public String toString() {
-		return "Modulo " + nombre + ":";
+		return "Modulo " + nombre + ", horas=" + horas  + "  " + codigomod  ;
 	}
+
+
+	
 	
 	
 	
