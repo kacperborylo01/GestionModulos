@@ -16,7 +16,7 @@ public class Main {
 			System.out.println("Pulsa 3 para frenar el carromato");
 			System.out.println("Pulsa 4 para rearrancar para el carromato y seguir con la carrera");
 			opc = leer.nextInt();			
-		} while ((opc <1  || opc <=4));
+		} while ((opc < 1  || opc > 4));
 		return opc;
 		
 	}
@@ -26,7 +26,7 @@ public class Main {
 		
 		int opc = 0;
 
-		Coche c = new Coche("Robert Kubica", 1234, 500);
+		Coche c = new Coche("Robert Kubica", 1234, 800010);
 		
 		do {
 			opc = mostrarMenu();
@@ -49,7 +49,7 @@ public class Main {
 			
 			}
 			
-		} while (c.getKmrecorridos() <= c.getDISTANCIA());
+		} while (c.getKmrecorridos() <= c.getdistancia());
 	}
 
 }

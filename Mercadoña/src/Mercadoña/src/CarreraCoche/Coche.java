@@ -35,7 +35,7 @@ public class Coche {
 		this.dorsal = dorsal;
 	}
 
-	public int getDISTANCIA() {
+	public int getdistancia() {
 		return distancia;
 	}
 
@@ -144,10 +144,15 @@ public class Coche {
 				
 				velocidad -= frenat;
 				
-		if (velocidad == 0) {
+		if (velocidad <= 0) {
 			this.setVelocidad(0);
 			this.setEstado("Parado");
 			System.out.println("Has frenado tanto que te has parado, necesitas acelerar para seguir");
+		
+		}else {
+			this.setVelocidad(velocidad);
+			this.setKmrecorridos(recorrido + velocidad);
+			System.out.println("Circulas a una velocidad de " + getVelocidad() + " km/h ");
 		}
 		
 		if (this.getKmrecorridos() >= this.distancia) {
@@ -159,12 +164,14 @@ public class Coche {
 		}
 		}
 	}
+	
+	
+	
+	
 
 	@Override
 	public String toString() {
-		return "Coche [nombrepiloto=" + nombrepiloto + ", dorsal=" + dorsal + ", distancia=" + distancia + ", estado="
-				+ estado + ", POTENCIA=" + POTENCIA + ", velocidad=" + velocidad + ", kmrecorridos=" + kmrecorridos
-				+ "]";
+		return  nombrepiloto + " con dorsal " + dorsal + " y una velocidad de " + velocidad + " km/h "+ " ,ha recorrido ya " + kmrecorridos + "km";
 	}
 	
 	
