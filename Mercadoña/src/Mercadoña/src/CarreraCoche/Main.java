@@ -20,13 +20,25 @@ public class Main {
 		return opc;
 		
 	}
+	
+	public static int menuCoches() {
+		Scanner leer = new Scanner(System.in);
+		
+		int opccoche = 0;
+		do {
+			System.out.println("Pulsa 1 para seleccionar modo de juego");
+			System.out.println("Pulsa 2 para aniadir un nuevo competidor");
+			
+		} while ((opccoche < 1 || opccoche > 2));
+		return opccoche;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		int opc = 0;
 
-		Coche c = new Coche("Robert Kubica", 1234, 800010);
+		Coche c = new Coche("Robert Kubica", 1234);
 		
 		do {
 			opc = mostrarMenu();

@@ -1,10 +1,14 @@
 package CarreraCoche;
 
+
+import java.util.Scanner;
+
 public class Carrera {
 
-	private String nombre;
+	protected static String nombre;
 	private int distancia;
-	private Coche vCoches[];
+	protected int dorsal;
+	protected static Coche vCoches[];
 
 	// Devuelvo true si todos los coches se encuentran en el estado de terminado
 	public boolean carreraTerminada() {
@@ -31,7 +35,20 @@ public class Carrera {
 	}	
 
 	public void anadirCoche() {
-
-		
+		Scanner leer = new Scanner(System.in);
+		for (int i = 0; i < vCoches.length; i++) {
+			if (vCoches[i] == null) {
+				System.out.println("Escribe el nombre del competidor");
+				nombre = leer.nextLine();
+			do {
+				System.out.println("Escribe el dorsal de este competidor");
+				dorsal = leer.nextInt();
+			} while (comprobarDorsal(dorsal) == true);
+				
+			vCoches[i] = new Coche(nombre, i);
+			}
+			
+		}
+			
 	}
 }

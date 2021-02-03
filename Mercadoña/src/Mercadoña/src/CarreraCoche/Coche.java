@@ -10,7 +10,7 @@ public class Coche {
 	private int velocidad;
 	private int kmrecorridos;
 	
-	public Coche(String nombrepiloto, int dorsal, int distancia) {
+	public Coche(String nombrepiloto, int dorsal) {
 		this.nombrepiloto = nombrepiloto;
 		this.dorsal = dorsal;
 		this.distancia = distancia;
