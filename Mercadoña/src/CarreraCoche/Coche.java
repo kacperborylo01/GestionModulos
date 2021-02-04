@@ -9,8 +9,13 @@ public class Coche {
 	private final int POTENCIA=50;
 	private int velocidad;
 	private int kmrecorridos;
+	private boolean psj;
 	
-	public Coche(String nombrepiloto, int dorsal) {
+	public Coche(String nomPiloto, int dorsal) {
+		 boolean psj;
+	}
+	
+	public Coche(String nombrepiloto, int dorsal,int distancia,boolean psj) {
 		this.nombrepiloto = nombrepiloto;
 		this.dorsal = dorsal;
 		this.distancia = distancia;
@@ -26,6 +31,8 @@ public class Coche {
 	public void setNombrepiloto(String nombrepiloto) {
 		this.nombrepiloto = nombrepiloto;
 	}
+	
+
 
 	public int getDorsal() {
 		return dorsal;
@@ -53,7 +60,9 @@ public class Coche {
 		return POTENCIA;
 	}
 
-	
+	public boolean esPersona() {
+		return psj;
+	}
 
 	public int getVelocidad() {
 		return velocidad;
@@ -77,7 +86,7 @@ public class Coche {
 			System.out.println("Tu coche se ha arrancado");
 		}else {
 				if (this.getEstado().equalsIgnoreCase("Arrancado")) {
-					System.out.println("Ya está arrancado");
+					System.out.println("Ya esta arrancado");
 				}else {
 					System.out.println("Imposible arrancar,revisar estado");
 				}
@@ -119,8 +128,10 @@ public class Coche {
 			if (this.kmrecorridos >= this.distancia) {
 				this.estado = "Terminado";
 			}else {
-				System.out.println("Todavía falta carrera para rato");
-			
+				System.out.println("Todavia falta carrera para rato");
+			if (this.kmrecorridos >= this.distancia) {
+				this.setEstado("Terminado");
+			}
 				
 			
 				}
@@ -159,6 +170,9 @@ public class Coche {
 			this.estado = "Terminado";
 		}else {
 			System.out.println("Sigue campeón que todavía no has terminado, esto no es un juego.");
+		}
+		if (this.kmrecorridos >= this.distancia) {
+			this.setEstado("Terminado");
 		}
 			
 		}
