@@ -169,7 +169,7 @@ public class Coche {
 		if (this.getKmrecorridos() >= this.distancia) {
 			this.estado = "Terminado";
 		}else {
-			System.out.println("Sigue campeón que todavía no has terminado, esto no es un juego.");
+			System.out.println("Sigue campeon que todavia no has terminado, esto no es un juego.");
 		}
 		if (this.kmrecorridos >= this.distancia) {
 			this.setEstado("Terminado");
