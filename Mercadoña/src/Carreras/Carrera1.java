@@ -1,11 +1,11 @@
-package CarreraCoche;
+package Carreras;
 
 
 import java.util.Scanner;
 
 import CarreraCoche.Coche;
 
-public class Carrera  {
+public class Carrera1  {
 	
 
 	private String nombre;
@@ -17,7 +17,7 @@ public class Carrera  {
 	
 	
 
-	public Carrera(String nombre, int distancia) {
+	public Carrera1(String nombre, int distancia) {
 		super();
 		this.nombre = nombre;
 		this.distancia = distancia;
